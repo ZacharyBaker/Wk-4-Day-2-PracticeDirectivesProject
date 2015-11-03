@@ -1,9 +1,9 @@
 var app = angular.module('directivePractice')
 
-	.controller('homeCtrl', function ($scope) {
+	.controller('homeCtrl', function ($scope, weatherService) {
 
 		$scope.showStuff = true;
-		
+
 		$scope.users = [
 			{
 				name: "Geoff McMammy",
@@ -38,5 +38,11 @@ var app = angular.module('directivePractice')
 		];
 
 		
-
+		
+		$scope.getWeather = function (city) {
+			weatherService.getWeather().then(function(response){
+				// console.log('this is the weather on control:', response);
+			})
+		}
+		$scope.getWeather('Provo');
 	});
