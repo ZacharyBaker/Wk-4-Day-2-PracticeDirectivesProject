@@ -11,6 +11,7 @@ app.directive('dirDisplay', function(){
 				scope.showStuff = !scope.showStuff;
 				scope.$apply();
 			})
+			console.log(scope);
 		}
 	};
 	
