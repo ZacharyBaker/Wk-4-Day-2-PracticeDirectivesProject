@@ -5,17 +5,18 @@ app.directive('dirDisplay', function () {
 	return {
 		templateUrl: 'app/directives/dirDisplay.html',
 		link: function (scope, elem, attr) {
-			// console.log(scope, elem, attr);
-			elem.on('click', function () {
 
+			elem.on('click', function () {
+				scope.setUser(scope.user);
 				scope.showStuff = !scope.showStuff;
 				scope.$apply();
 			})
 			// console.log(scope);
 		},
 		scope: {
-			user: '=',
-			setUser: '&'
+			user: '=userInfo',
+			setUser: '&',
+			showStuff: '='
 		}
 	};
 

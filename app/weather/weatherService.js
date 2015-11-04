@@ -17,7 +17,7 @@ app.service('weatherService', function ($http, $q) {
 				temp: tempInF,
 				description: response.data.weather[0].description
 			}
-			console.log('this is the result object', result);
+			
 			deferred.resolve(result);
 		})
 

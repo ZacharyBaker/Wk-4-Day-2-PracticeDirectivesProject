@@ -2,7 +2,7 @@ var app = angular.module('directivePractice')
 
 	.controller('homeCtrl', function ($scope, weatherService) {
 
-		$scope.showStuff = true;
+		// $scope.showStuff = true;
 
 		$scope.users = [
 			{
@@ -44,8 +44,11 @@ var app = angular.module('directivePractice')
 				
 		}
 		
-		$scope.unknownFunc = function(param){
-			$scope.param;
+		
+		
+		$scope.updateUser = function(user){
+			$scope.currentUser = user;
 		}
+		$scope.currentUser = $scope.users[0];
 		
 	});
