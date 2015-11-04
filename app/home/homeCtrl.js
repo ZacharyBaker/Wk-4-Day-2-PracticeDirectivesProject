@@ -40,10 +40,12 @@ var app = angular.module('directivePractice')
 		
 		
 		$scope.getWeather = function (city) {
-			weatherService.getWeather().then(function(response){
-				// console.log('this is the weather on control:', response);
-				$scope.boringAssWeather = response;
-			})
+			return weatherService.getWeather(city);
+				
 		}
-		// $scope.getWeather('Provo');
+		
+		$scope.unknownFunc = function(param){
+			$scope.param;
+		}
+		
 	});
