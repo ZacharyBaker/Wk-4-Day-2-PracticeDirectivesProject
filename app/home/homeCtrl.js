@@ -42,7 +42,8 @@ var app = angular.module('directivePractice')
 		$scope.getWeather = function (city) {
 			weatherService.getWeather().then(function(response){
 				// console.log('this is the weather on control:', response);
+				$scope.boringAssWeather = response;
 			})
 		}
-		$scope.getWeather('Provo');
+		// $scope.getWeather('Provo');
 	});

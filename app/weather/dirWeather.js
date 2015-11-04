@@ -5,8 +5,10 @@ app.directive('dirWeather', function(){
 	return {
 		templateUrl: 'app/weather/dirWeather.html',
 		scope: {
-			currentUser: '='
-		}
+			currentUser: '=',
+			weatherCall: '&'
+		}//,
+		// controller: 
 	}
 	
 })
